@@ -25,10 +25,10 @@ def salvar_item():
     try:
         conn = psycopg2.connect(
           dbname = "loja",
-          user= "",
-          password= "",
-          host="",
-         port= ""
+          user= "postgres",
+          password= "pg@10",
+          host="localhost",
+         port= "5432"
         )
 
         cur = conn.cursor()
@@ -62,10 +62,10 @@ def deletar_item():
     try:
         conn = psycopg2.connect(
         dbname = "loja",
-        user= "",
-        password= "",
-        host="",
-        port= ""
+        user= "postgres",
+        password= "pg@10",
+        host="localhost",
+        port= "5432"
      )
     
         cur = conn.cursor()
@@ -105,10 +105,10 @@ def dar_baixa():
     try:
         conn = psycopg2.connect(
         dbname = "loja",
-        user= "",
-        password= "",
-        host="",
-        port= ""
+        user= "postgres",
+        password= "pg@10",
+        host="localhost",
+        port= "5432"
      )
         
         cur = conn.cursor()
@@ -146,10 +146,10 @@ def gerar_planilha():
     try:
         conn = psycopg2.connect(
         dbname = "loja",
-        user= "",
-        password= "",
-        host="",
-        port= ""
+        user= "postgres",
+        password= "pg@10",
+        host="localhost",
+        port= "5432"
      )
         cur = conn.cursor()
         cur.execute("SELECT nome, categoria, preco, quantidade FROM itens ORDER BY nome")
@@ -170,7 +170,7 @@ def gerar_planilha():
            for j, valor in enumerate(linha, start=1):
              ws.cell(row=i, column=j, value=valor)
 
-        wb.save("C:\\Users\\ariel\\OneDrive\\Área de Trabalho\\ChagaStore_admin\\estoque.xlsx")
+        wb.save("..:\\...\\..\\..\\...\\...\\estoque.xlsx")
         cur.close()
         conn.close()
 
