@@ -1,11 +1,11 @@
 import psycopg2
 
 conn = psycopg2.connect(
-    dbname = "postgres",
-    user= "postgres",
-    password= "pg@10",
-    host="localhost",
-    port= "5432"
+    dbname = "loja",
+    user= "",
+    password= "",
+    host="",
+    port= ""
 )
 
 conn.autocommit = True
